@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Medium Premium",
+  "version": "0.0.1",
+  "description": "Redirects to the free site of paid medium article",
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://webcache.googleusercontent.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Click to read a paid medium article"
+  }
+  
+}
